@@ -1,0 +1,12 @@
+@import url("/public//fonts//Inconsolata-Bold.ttf");
+@import url("/public//fonts/Inconsolata-Regular.ttf");
+@import url("/public//fonts/Inter-Bold.ttf");
+@import url("/public//fonts/Inter-Regular.ttf");
+@import url("/public//fonts//Lora-Bold.ttf");
+@import url("/public//fonts//Lora-BoldItalic.ttf");
+@import url("/public//fonts//Lora-Regular.ttf");
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
