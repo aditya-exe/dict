@@ -25,7 +25,7 @@ const FontSelector = () => {
           <Listbox.Button className="relative w-full cursor-default rounded bg-stone-300 dark:bg-stone-900 dark:text-white py-2 pl-3 pr-5 text-left focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
             <span className="block truncate">{fontLocal}</span>
             <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-              {/* <Image src={"/icon-arrow-down.svg"} alt="arrow-down" height={15} width={15} /> */}
+               {/*<Image src={"/icon-arrow-down.svg"} alt="arrow-down" height={15} width={15} /> */}
               <MdKeyboardArrowDown className="text-2xl text-orange-500 dark:text-blue-500" />
             </span>
           </Listbox.Button>

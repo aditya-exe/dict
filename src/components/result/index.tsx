@@ -11,15 +11,16 @@ const Result = () => {
   if (queryReq.isLoading && query) {
     return (
       <div className="absolute right-1/2 bottom-1/2  transform translate-x-1/2 translate-y-1/2 ">
-        <div className="border-t-transparent border-solid animate-spin  rounded-full border-2 border-orange-500 dark:border-blue-500 h-[50px] w-[50px]"></div>
+        <div
+          className="border-t-transparent border-solid animate-spin  rounded-full border-2 border-orange-500 dark:border-blue-500 h-[50px] w-[50px]"></div>
       </div>
-    )
+    );
   } else if (!query) {
     return (
       <div className="flex items-center justify-center p-32 text-4xl font-light italic">
         Looking for something?
       </div>
-    )
+    );
   }
   if (queryReq.isFetched) {
     if (queryReq.data) {
@@ -33,7 +34,7 @@ const Result = () => {
         if (x) {
           return x[1];
         }
-      })
+      });
       const audioFind = res?.phonetics?.find((ele) => {
         const x = Object.entries(ele).find((k) => {
           if (k[0] === "audio") {
@@ -73,12 +74,13 @@ const Result = () => {
           {/* <h3 className="p-2 text-2xl"></h3> */}
         </div>
         <div className={`p-4`}>
-          <IoPlayCircleSharp onClick={() => handleAudioPlay()} className="text-7xl cursor-pointer hover:text-orange-500 dark:hover:text-blue-500 transition ease-in-out duration-500" />
-          <audio ref={audioRef as MutableRefObject<any>} autoPlay={false} src={audio || ""}>
+          <IoPlayCircleSharp onClick={() => handleAudioPlay()}
+                             className="text-7xl cursor-pointer hover:text-orange-500 dark:hover:text-blue-500 transition ease-in-out duration-500" />
+          <audio ref={audioRef as MutableRefObject<never>} autoPlay={false} src={audio || ""}>
           </audio>
         </div>
       </div>
-      <div className="">
+      <div className="mx-2">
         {meanings?.map((mean, idx) => (
           <div key={idx} className="border-2 mb-2 border-orange-500 rounded dark:border-blue-500">
             <section className="p-3">
@@ -96,8 +98,8 @@ const Result = () => {
           </div>
         ))}
       </div>
-    </div >
-  )
-}
+    </div>
+  );
+};
 
 export default Result;

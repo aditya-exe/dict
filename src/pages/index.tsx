@@ -1,6 +1,5 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
 import Search from "../components/search";
 import Result from "../components/result";
@@ -12,19 +11,31 @@ const Home: NextPage = () => {
   const fnts = {
     "Sans Serif": "font-ss",
     "Serif": "font-s",
-    "Mono": "font-m",
-  }
+    "Mono": "font-m"
+  };
 
   return (
-    <div className={`${font && fnts[font as keyof typeof fnts]} font-ss flex justify-center bg-stone-300 dark:bg-stone-900 dark:text-gray-300`}>
+    // <div className={`${font && fnts[font as keyof typeof fnts]} flex justify-center flex-col bg-stone-300 dark:bg-stone-900 dark:text-gray-300`}>
+    //   <Head>
+    //     <title>
+    //       Dict
+    //     </title>
+    //     <link rel="shortcut icon" href="/icon.png" type="image/x-icon" />
+    //   </Head>
+    //
+    //   <main className="mn-w-[750px] mx-w-[750px] min-h-screen">
+    //     <Navbar />
+    //     <Search />
+    //     <Result />
+    //   </main>
+    // </div>
+    <div
+      className={`${font && fnts[font as keyof typeof fnts]} bg-stone-300 dark:bg-stone-900 dark:text-gray-300 flex justify-center h-screen`}>
       <Head>
-        <title>
-          Dict
-        </title>
+        <title>Dict</title>
         <link rel="shortcut icon" href="/icon.png" type="image/x-icon" />
       </Head>
-
-      <main className="min-w-[750px] max-w-[750px] min-h-screen">
+      <main className="md:min-w-[750px] md:max-w-[750px] w-full">
         <Navbar />
         <Search />
         <Result />
